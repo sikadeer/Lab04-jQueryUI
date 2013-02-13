@@ -88,6 +88,9 @@
 			range: true,
 			values: [ 17, 67 ]
 		});
+
+		$( "#sortable" ).sortable();
+    	$( "#sortable" ).disableSelection();
 		
 
 		
@@ -109,48 +112,52 @@
 	</script>
 
 	<style>
-	body{
-		font: 62.5% "Trebuchet MS", sans-serif;
-		margin: 50px;
-	}
-	.demoHeaders {
-		margin-top: 2em;
-	}
-	#dialog-link {
-		padding: .4em 1em .4em 20px;
-		text-decoration: none;
-		position: relative;
-	}
-	#dialog-link span.ui-icon {
-		margin: 0 5px 0 0;
-		position: absolute;
-		left: .2em;
-		top: 50%;
-		margin-top: -8px;
-	}
-	#icons {
-		margin: 0;
-		padding: 0;
-	}
-	#icons li {
-		margin: 2px;
-		position: relative;
-		padding: 4px 0;
-		cursor: pointer;
-		float: left;
-		list-style: none;
-	}
-	#icons span.ui-icon {
-		float: left;
-		margin: 0 4px;
-	}
-	.fakewindowcontain .ui-widget-overlay {
-		position: absolute;
-	}
+		body{
+			font: 62.5% "Trebuchet MS", sans-serif;
+			margin: 50px;
+		}
+		.demoHeaders {
+			margin-top: 2em;
+		}
+		#dialog-link {
+			padding: .4em 1em .4em 20px;
+			text-decoration: none;
+			position: relative;
+		}
+		#dialog-link span.ui-icon {
+			margin: 0 5px 0 0;
+			position: absolute;
+			left: .2em;
+			top: 50%;
+			margin-top: -8px;
+		}
+		#icons {
+			margin: 0;
+			padding: 0;
+		}
+		#icons li {
+			margin: 2px;
+			position: relative;
+			padding: 4px 0;
+			cursor: pointer;
+			float: left;
+			list-style: none;
+		}
+		#icons span.ui-icon {
+			float: left;
+			margin: 0 4px;
+		}
+		.fakewindowcontain .ui-widget-overlay {
+			position: absolute;
+		}
 
-	#accordion, #tabs{
-		margin: 20px 0;
-	}
+		#accordion, #tabs{
+			margin: 20px 0;
+		}
+
+		#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+	  	#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+	  	#sortable li span { position: absolute; margin-left: -1.3em; }
 	</style>
 
 </head>
@@ -212,17 +219,17 @@
 	</p>
 	<p>
 	Date of departure:<!-- DATEPICKER -->
-	 <input type="text" name="datedeparture" />
+	 <input type="text" id="datepicker" name="datedeparture" />
 	</p>
 	<p>
 	Please place the following priorities in order of importance
-	<ul><!-- SORTABLE -->
-		<li>Price</li>
-		<li>Activities</li>
-		<li>Family-Friendly</li>
-		<li>Strip Bars</li>
-		<li>Minimal Drug-Lord beheadings</li>
-		<li>A Velociraptor-free holiday</li>
+	<ul id="sortable"><!-- SORTABLE -->
+		<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Price</li>
+		<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Activities</li>
+		<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Family-Friendly</li>
+		<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Strip Bars</li>
+		<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Minimal Drug-Lord beheadings</li>
+		<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>A Velociraptor-free holiday</li>
 	</ul>
 	
 	</p>
