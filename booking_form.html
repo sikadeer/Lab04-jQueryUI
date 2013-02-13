@@ -18,28 +18,23 @@
 
 		
 		var availableTags = [
-			"ActionScript",
-			"AppleScript",
-			"Asp",
-			"BASIC",
-			"C",
-			"C++",
-			"Clojure",
-			"COBOL",
-			"ColdFusion",
-			"Erlang",
-			"Fortran",
-			"Groovy",
-			"Haskell",
-			"Java",
-			"JavaScript",
-			"Lisp",
-			"Perl",
-			"PHP",
-			"Python",
-			"Ruby",
-			"Scala",
-			"Scheme"
+			"Ottawa",
+			"Halifax",
+			"Fredericton",
+			"Edmonton",
+			"Vancouver",
+			"Toronto",
+			"Montreal",
+			"Quebec City",
+			"Victoria",
+			"Calgary",
+			"Saskatoon",
+			"Regina",
+			"Winnipeg",
+			"Yellowknife",
+			"Whitehorse",
+			"St. John's",
+			"Charlottetown"
 		];
 		$( "#autocomplete" ).autocomplete({
 			source: availableTags
@@ -205,7 +200,7 @@
 	</p>
 	<p>
 		Your city:<!-- AUTOCOMPLETE; populate with several Canadian cities -->
-		<input type="text" name="city"/>
+		<input id="autocomplete" type="text" name="city"/>
 	</p>
 
 	<p>
